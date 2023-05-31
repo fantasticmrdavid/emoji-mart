@@ -1,8 +1,9 @@
 {
   "search": "Search",
-  "search_no_results_1": "Oh no!",
-  "search_no_results_2": "That emoji couldn’t be found",
-  "pick": "Pick an emoji…",
+  "searchNoResultsHeading": "No results",
+  "search_no_results_1": "No result",
+  "search_no_results_2": "Type the custom emoji shortcode from Slack in the ‘Value emoji’ field like, ‘:custom_emoji:’",
+  "pick": "Select an emoji…",
   "add_custom": "Add custom emoji",
   "categories": {
     "activity": "Activity",

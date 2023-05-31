@@ -9,10 +9,10 @@
   --border-radius: 10px;
   --category-icon-size: 18px;
   --font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
-  --font-size: 15px;
+  --font-size: 14px;
 
-  --preview-placeholder-size: 21px;
-  --preview-title-size: 1.1em;
+  --preview-placeholder-size: 16px;
+  --preview-title-size: 16px;
   --preview-subtitle-size: .9em;
 
   --shadow-color: 0deg 0% 0%;
@@ -320,7 +320,7 @@ button {
 #preview {
   z-index: 2;
   position: relative;
-  padding: calc(var(--padding) + 4px) var(--padding);
+  padding: var(--padding-small);
   padding-right: var(--sidebar-width);
 
   .preview-placeholder { font-size: var(--preview-placeholder-size) }

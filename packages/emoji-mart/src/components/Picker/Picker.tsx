@@ -698,10 +698,10 @@ export default class Picker extends Component {
       >
         <div class="flex flex-middle flex-grow">
           <div
-            class="flex flex-auto flex-middle flex-center"
+            class={`flex flex-auto flex-middle flex-center margin-small-${this.dir[0]}`}
             style={{
-              height: this.props.emojiButtonSize,
-              fontSize: this.props.emojiButtonSize,
+              height: 16,
+              fontSize: 16,
             }}
           >
             <Emoji
@@ -715,25 +715,22 @@ export default class Picker extends Component {
                       : 'point_up')
               }
               set={this.props.set}
-              size={this.props.emojiButtonSize}
+              size={16}
               skin={this.state.tempSkin || this.state.skin}
               spritesheet={true}
               getSpritesheetURL={this.props.getSpritesheetURL}
             />
           </div>
 
-          <div class={`margin-${this.dir[0]}`}>
+          <div class={`margin-small-${this.dir[0]}`}>
             {emoji || noSearchResults ? (
-              <div class={`padding-${this.dir[2]} align-${this.dir[0]}`}>
+              <div class={`flex flex-middle padding-small align-${this.dir[0]}`} style={{ minHeight: "36px"}}>
                 <div class="preview-title">
                   {emoji ? emoji.name : I18n.search_no_results_1}
                 </div>
-                <div class="preview-subtitle color-c">
-                  {emoji ? emoji.skins[0].shortcodes : I18n.search_no_results_2}
-                </div>
               </div>
             ) : (
-              <div class="preview-placeholder color-c">{I18n.pick}</div>
+              <div class="preview-placeholder">{I18n.pick}</div>
             )}
           </div>
         </div>
@@ -847,8 +844,9 @@ export default class Picker extends Component {
     return (
       <div class="category" ref={this.refs.search}>
         <div class={`sticky padding-small align-${this.dir[0]}`}>
-          {I18n.categories.search}
+          {searchResults.length > 0 ? I18n.categories.search : <div class={"padding-t"}>{I18n.searchNoResultsHeading}</div>}
         </div>
+        { searchResults.length === 0 && <div class={`padding-small align-${this.dir[0]}`}>{I18n.search_no_results_2}</div>}
         <div>
           {!searchResults.length ? (
             <div class={`padding-small align-${this.dir[0]}`}>
