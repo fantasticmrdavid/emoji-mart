@@ -695,6 +695,7 @@ export default class Picker extends Component {
         class="flex flex-middle"
         dir={this.dir}
         data-position={this.props.previewPosition}
+        style={{ minHeight: "48px" }}
       >
         <div class="flex flex-middle flex-grow">
           <div

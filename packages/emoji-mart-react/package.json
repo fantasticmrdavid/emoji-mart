@@ -1,6 +1,6 @@
 {
   "name": "@fantasticmrdavid/emoji-mart-react",
-  "version": "1.1.1-c",
+  "version": "1.1.1-e",
   "description": "React wrapper for Emoji Mart; the emoji picker for the web.",
   "license": "MIT",
   "homepage": "https://missiveapp.com/open/emoji-mart",
@@ -25,6 +25,6 @@
     "LICENSE"
   ],
   "dependencies": {
-    "@fantasticmrdavid/emoji-mart": "5.5.2-b"
+    "@fantasticmrdavid/emoji-mart": "5.5.2-c"
   }
 }
